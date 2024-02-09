@@ -74,6 +74,73 @@ Get a user by passing username and password in basic authentication header.
 ### `PUT http://localhost:8080/v1/user/self`
 Update user details by providing authentication headers.
 
+## Demo on Digital Ocean
+
+1. Create a droplet on digital ocean
+```
+$ ssh-keygen
+```
+2. save as below
+```
+$ /Users/vinaykumarchelpuri/.ssh/digitalocean 
+```
+3. passpharase git
+```
+$ cd .ssh
+$ cat digitalocean.pub
+```
+4. copy it and paste in digital ocean
+5. ssh into vm using public ssh key
+```
+$ ssh -i ~/.ssh/digitalocean [root@](mailto:root@147.182.240.7)164.92.99.221
+$ cd .ssh/
+```
+6. change permission on private key
+```
+$ chmod 600 .ssh/digitaloceanssh into vm now
+```
+## Recommended Commands in centOS
+```
+$ sudo dnf install vim -y
+
+$ sudo yum install unzip -y
+
+$ sudo yum install java-17-openjdk-devel -y
+
+$ sudo dnf install maven-openjdk17 -y
+
+$ sudo yum install postgresql-server postgresql-contrib -y
+
+$ sudo postgresql-setup initdb
+
+$ sudo systemctl start postgresql
+
+$ sudo systemctl enable postgresql
+
+$ sudo -u postgres psql
+
+CREATE DATABASE app_db;
+\l
+\password postgres
+CREATE USER web_app with PASSWORD 'XXXXXXX';
+ALTER USER web_app WITH SUPERUSER;
+
+$ vim  /var/lib/pgsql/data/pg_hba.conf —> md5 for all connections
+
+$ vim /var/lib/pgsql/data/postgresql.conf —> listen_address = ‘*’ if it doesn’t work
+
+$ sudo systemctl restart postgresql
+
+$ scp -i .ssh/digitalocean ~/Downloads/vinaykumar_chelpuri_002207627_02.zip root@164.92.99.221:/tmp
+
+$ unzip vinaykumar_chelpuri_002207627_02.zip
+$ cd vinaykumar_chelpuri_002207627_02
+$ cd webapp
+$ mvn clean install
+$ mvn spring-boot:run
+$ ps
+$ kill pid
+```
 
 ## License
 
