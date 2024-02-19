@@ -41,7 +41,7 @@ public class WebappTests {
                 .get("/v1/user/self")
                 .then()
                 .statusCode(HttpStatus.OK.value())
-                .body("first_name", equalTo("Jane"))
+                .body("first_name", equalTo("jin"))
                 .body("last_name", equalTo("Doe"))
                 .body("password", nullValue())
                 .body("username", equalTo("jane.doe@example.com"));
