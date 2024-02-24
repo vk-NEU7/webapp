@@ -33,7 +33,7 @@ variable "source_env" {
 source "googlecompute" "centOS-image" {
   project_id              = var.project_id
   zone                    = var.zone
-  source_image_family     = var.image_family
+  source_image_family     =   var.image_family
   image_name              = "packer-centos8-${formatdate("YYYY-MM-DD-hh-mm-ss", timestamp())}"
   ssh_username            = "packer"
   tags                    = ["packer-image-centos8"]
