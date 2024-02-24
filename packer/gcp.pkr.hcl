@@ -5,7 +5,7 @@ packer {
       source  = "github.com/hashicorp/googlecompute"
     }
   }
-}
+
 variable "project_id" {
   type    = string
   default = ""
