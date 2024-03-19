@@ -55,6 +55,7 @@ jobs:
 
       - name: Build and compile code
         run: |
+          pwd
           pg_isready
           mvn -version
           mvn compile
