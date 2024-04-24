@@ -22,12 +22,10 @@ As the deployment progresses, the workflow continuously monitors the status of t
 
 ## Repository Setup
 
-Ensure the necessary directory structure and configuration files are present in your repository:
-
-- `packer/`: Directory containing Packer configuration files.
-- `systemd/`: Directory containing systemd configuration files for the application.
+- `packer/`: Directory containing Packer configuration files for immutable image build.
+- `systemd/`: Directory containing systemd daemon configuration files for the application startup.
 - `target/web-app-0.0.1-SNAPSHOT.jar`: Built JAR file of the Maven project.
-- `opsagent/config.yaml`: Configuration file for operational agents.
+- `opsagent/config.yaml`: Configuration file for google ops-agent cloud observability.
 - `.env`: Environment file containing database credentials.
 
 ## Usage
